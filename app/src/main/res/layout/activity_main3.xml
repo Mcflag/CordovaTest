@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!-- button 演示Java调用web -->
+    <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:text="Java调用Web"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toTopOf="@id/webView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- webview 演示web调用Java -->
+    <com.github.lzyzsd.jsbridge.BridgeWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button">
+    </com.github.lzyzsd.jsbridge.BridgeWebView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
